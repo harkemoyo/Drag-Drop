@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Drag n Drop</title>
+</head>
+<body>
+    <h1>Hark Board</h1>
+    <div class="drag-container">
+        <ul class="drag-list">
+            <li class="drag-column back-column">
+                <span class="header">
+                    <h1>Backlog</h1>
+            </span>
+            <!--backlog content -->
+            <div id="Backlog" class="custom-scroll">
+                <ul class="drag-item-list" id="backlog-list" ondrop="drop(event)" ondragover="allowDrop(event)"ondragenter="dragEnter(0)"></ul>
+            </div>
+            <!-- add btn -->
+            <div class="btn-group">
+                <div class="add-btn" onclick="showBtnBox(0)">
+                    <span class="plus-sign">+</span>
+                    <span>ADD TIME</span>
+                
+                </div>
+                <div class="add-btn solid" onclick="hideBtnBox(0)">
+                    <span>Save Item</span>
+                </div>
+            </div>
+            <div class="add-container">
+                <div class="add-item" contenteditable="true"></div>
+            </div>
+           
+            <!-- progress -->
+            </li>
+            <li class="drag-column progress-column">
+                <span class="header">
+                    <h1>progress</h1>
+            </span>
+            <!-- progress content -->
+            <div id="progress" class="custom-scroll">
+                <ul class="drag-item-list" id="progress-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(1)"></ul>
+            </div>
+            <!-- add btn -->
+            <div class="btn-group">
+                <div class="add-btn" onclick="showBtnBox(1)">
+                    <span class="plus-sign">+</span>
+                    <span>ADD TIME</span>
+                </div>
+               
+                <div class="add-btn solid" onclick="hideBtnBox(1)">
+                    <span>SAVE ITEM</span>
+                </div>
+            </div>
+            <div class="add-container">
+                <div class="add-item" contenteditable="true"></div>
+            </div>
+            </li>
+            <!-- complete -->
+            <li class="drag-column complete-column">
+                <span class="header">
+                    <h1>complete</h1>
+            </span>
+            <!--  content -->
+            <div id="complete" class="custom-scroll">
+                <ul class="drag-item-list" id="complete-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(2)"></ul>
+            </div>
+            <!-- add btn -->
+            <div class="btn-group">
+                <div class="add-btn" onclick="showBtnBox(2)">
+                    <span class="plus-sign">+</span>
+                    <span>ADD TIME</span>
+
+                </div>
+                <div class="add-btn solid" onclick="hideBtnBox(2)">
+                    <span>SAVE item</span>
+                </div>
+            </div>
+            <div class="add-container">
+                <div class="add-item" contenteditable="true"></div>
+            </div>
+            </li>
+
+            <!-- on hold -->
+            <li class="drag-column on-hold-column">
+                <span class="header">
+                    <h1>On HOLD</h1>
+            </span>
+            <!-- co content -->
+            <div id="on-hold-content" class="custom-scroll">
+            <ul class="drag-item-list" id="on-hold-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(3)"></ul>
+            </div>
+            <!-- add btn -->
+            <div class="btn-group">
+                <div class="add-btn" onclick="showBtnBox(3)">
+                    <span class="plus-sign">+</span>
+                    <span>ADD TIME</span>
+
+                </div>
+                <div class="add-btn solid" onclick="hideBtnBox(3)">
+                    <span>SAVE ITEM</span>
+                </div>
+            </div>
+            <div class="add-container">
+                <div class="add-item" contenteditable="true"></div> 
+            </div>
+            </li>
+        </ul>
+    </div>
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+</html>
